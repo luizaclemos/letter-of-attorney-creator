@@ -15,7 +15,7 @@ input {
 textarea:focus, 
 input[type="text"]:focus,
 input[type="email"]:focus {
-    outline: 1px solid brown;
+    outline: 1px solid rgb(63, 61, 61);
 }
 
 textarea {
@@ -34,7 +34,7 @@ select {
 }
 
 button {
-    background-color: beige;
+    background-color: rgb(218, 218, 213);
 }
 
 input[type="text"],
@@ -47,10 +47,22 @@ button {
 }
 
 button:hover {
-    background-color: rgb(248, 206, 155);
+    background-color: rgb(179, 178, 176);
     cursor: pointer;
 }
 
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.form-group {
+    flex: 1;
+    min-width: 200;
+}
 
 
 
