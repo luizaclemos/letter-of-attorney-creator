@@ -18,11 +18,33 @@
             <br><br> 
             POWERS: The grantor appoints the grantee as her attorney-in-fact, granting her powers under the clauses "ad judicia"
             and "ad extra", jointly or separately, to represent the grantor in court or outside of it. The grantee is also granted
-            special powers to receive service of process, to agree, settle, admit, dissent, withdraw, negotiate, enter into 
-            commitments, acknowledge the legitimacy of claims, waive rights on which legal actions are based, receive and issue 
-            receipts, enforce and comply with judicial and extrajudicial decisions and instruments, collect amounts and withdraw
-            judicial warrants issued in the name of the grantor, make commitments and declare financial hardship, appoint 
-            representatives, and to delegate (with or without reservation) the powers granted herein.      
+            special powers to {{ powers|join:", " }}.      
         </p>
+        <br><br>
+
+        {% if not is_pdf %}
+            <form action="{% url 'download_pdf' %}" method="post">
+                {% csrf_token %}
+                
+                <input type="hidden" name="name" value="{{ name }}">
+                <input type="hidden" name="nationality" value="{{ nationality }}">
+                <input type="hidden" name="maritalstatus" value="{{ maritalstatus }}">
+                <input type="hidden" name="profession" value="{{ profession }}">
+                <input type="hidden" name="cpf" value="{{ cpf }}">
+                <input type="hidden" name="identity_card" value="{{ identity_card }}">
+                <input type="hidden" name="street" value="{{ street }}">
+                <input type="hidden" name="city" value="{{ city }}">
+                <input type="hidden" name="state" value="{{ state }}">
+                <input type="hidden" name="country" value="{{ country }}">
+                <input type="hidden" name="zipcode" value="{{ zipcode }}">
+                <input type="hidden" name="email" value="{{ email }}">
+
+                {% for power in powers %}
+                    <input type="hidden" name="powers[]" value="{{ power }}">            
+                {% endfor %}
+
+                <button type="submit">Download PDF</button>
+            </form>
+        {% endif %}
     </body>
 </html>
