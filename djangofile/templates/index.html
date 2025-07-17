@@ -16,7 +16,8 @@
     <h1>Letter of Attorney Creator</h1>
     <br><br><br>
     <section class="wrapper-main">
-        <form action="example.html" method="POST">
+        <form action="{% url 'letter' %}" method="POST">
+            {% csrf_token %}
             <div class="form-row">
                 <div class="form-group">
                     <label for="name">Name</label>
@@ -43,7 +44,13 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="steet">Steet Address</label>
+                    <label for="nationality">Nationality</label>
+                    <br>
+                    <input type="text" id="nationality" name="nationality" placeholder="Nationality" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="street">Steet Address</label>
                     <br>
                     <input type="text" id="street" name="street" placeholder="Street Address" required>
                 </div>
@@ -82,19 +89,21 @@
                 <option value="Married">Married</option>
                 <option value="Divorced">Divorced</option>
                 <option value="Widowed">Widowed</option>
-                <option value="Separeted">Separated</option>
+                <option value="Separated">Separated</option>
             </select>
             <br><br>
-            <label>Powers to be granted:</label>
-            <br>
-            <input type="checkbox" id="representpower" name="representpower" value="Represent">
-            <label for="representpower">Represent</label>
-            <input type="checkbox" id="settlepower" name="settlepower" value="Settle">
-            <label for="settlepower">Settle</label>
-            <input type="checkbox" id="receivepaymentspower" name="receivepaymentspower" value="ReceivePayments">
-            <label for="receivepaymentspower">Receive Payments</label>
-            <input type="checkbox" id="issuereceiptspower" name="issuereceiptspower" value="IssueReceipts">
-            <label for="issuereceiptspower">Issue Receipts</label>
+            <fieldset>
+                <legend>Powers to be granted:</legend>
+                <br>
+                <input type="checkbox" id="representpower" name="powers[]" value="Represent">
+                <label for="representpower">Represent</label>
+                <input type="checkbox" id="settlepower" name="powers[]" value="Settle">
+                <label for="settlepower">Settle</label>
+                <input type="checkbox" id="receivepaymentspower" name="powers[]" value="ReceivePayments">
+                <label for="receivepaymentspower">Receive Payments</label>
+                <input type="checkbox" id="issuereceiptspower" name="powers[]" value="IssueReceipts">
+                <label for="issuereceiptspower">Issue Receipts</label>
+            </fieldset>
             <br><br>
             <button type="submit" value="submit">Send data</button>
 
