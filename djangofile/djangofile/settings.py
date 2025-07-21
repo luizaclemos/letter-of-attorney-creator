@@ -28,6 +28,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['.railway.app', 'localhost']
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://letter-of-attorney-creator-production.up.railway.app',
+]
+
 
 # Application definition
 
