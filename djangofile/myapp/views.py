@@ -5,6 +5,9 @@ from xhtml2pdf import pisa
 
 
 # Create your views here.
+def first_page(request):
+    return render(request, 'firstpage.html')
+
 def index(request):
     return render(request, 'index.html')
 
