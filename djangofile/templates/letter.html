@@ -2,23 +2,23 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Letter of Attorney</title>
+        <title>Instrumento de Procuração</title>
     </head>
     <body>
-        <h1>Letter of Attorney</h1>
+        <h1>Instrumento de Procuração</h1>
         <br>
         <p>
-            GRANTOR: {{ name }}, {{ nationality }}, {{ maritalstatus }}, {{ profession }}, 
-            registered with CPF nº {{ cpf }} and RG nº {{ identity_card }}, residing at {{ street }}, {{ city }},
-            {{ state }}, {{ country }}, Zip Code {{ zipcode }}.<br>
-            Email: {{ email}}.
+            OUTORGANTE: {{ name }}, {{ nationality }}, {{ maritalstatus }}, {{ profession }}, 
+            inscrito(a) no CPF nº {{ cpf }}, portador(a) do RG nº {{ identity_card }}, residente e domiciliada à {{ street }}, {{ city }},
+            {{ state }}, {{ country }}, CEP {{ zipcode }}.<br>
+            E-mail: {{ email}}.
             <br><br>
-            GRANTEE: This power of attorney is granted to attorney Luiza Campos Lemos, registered with the OAB/RJ nº 224.024,
-            with professional address at Rua General Pereira da Silva, 90, 1603, Icaraí, Niterói - RJ, Zip Code 24220031.
+            OUTORGADA: A presente procuração é concedida à advogada Luiza Campos Lemos, inscrita na OAB/RJ sob o nº 224.024,
+            com endereço profissional na Rua General Pereira da Silva, 90, 1603, Icaraí, Niterói - RJ, CEP 24220031.
             <br><br> 
-            POWERS: The grantor appoints the grantee as her attorney-in-fact, granting her powers under the clauses "ad judicia"
-            and "ad extra", jointly or separately, to represent the grantor in court or outside of it. The grantee is also granted
-            special powers to {{ powers|join:", " }}.      
+            POWERS: O(a) outorgante nomeia a outorgada sua procuradora, conferindo-lhe os poderes da cláusula "ad judicia" e "ad extra",
+            conjunta ou separadamente, para representá-lo(a) em juízo ou fora dele, outorgando-a ainda os especiais poderes
+            para {{ powers|join:", " }}.      
         </p>
         <br><br>
 
