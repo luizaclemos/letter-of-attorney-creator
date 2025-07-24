@@ -70,3 +70,12 @@ button:hover {
     flex: 1;
     min-width: 200;
 }
+
+p {
+    text-align: justify;
+}
+
+.bold-underlined {
+    font-weight: bold;
+    text-decoration: underline;
+}

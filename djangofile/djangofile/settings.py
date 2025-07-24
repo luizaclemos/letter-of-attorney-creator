@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-uhiv&tr&)i9lhcac6fwls)g-=60hutvud@%!$g7)726f!z6*s@
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['.railway.app', 'localhost']
+ALLOWED_HOSTS = ['.railway.app', 'localhost', '127.0.0.1']
 
 CSRF_TRUSTED_ORIGINS = [
     'https://letter-of-attorney-creator-production.up.railway.app',
