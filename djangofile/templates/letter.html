@@ -9,8 +9,11 @@
         <link rel="stylesheet" href="{% static 'main.css' %}">
     </head>
     <body>
+        <header class="pageheader">
+            <img src="{% static 'img/logo.png' %}" alt="Company Logo" class="logo">
+        </header>
         <h1>Instrumento de Procuração</h1>
-        <br>
+        <br><br><br>
         <p>
             <span class="bold-underlined">OUTORGANTE</span>: {{ name }}, {{ nationality }}, {{ maritalstatus }}, {{ profession }}, 
             inscrito(a) no CPF nº {{ cpf }}, portador(a) do RG nº {{ identity_card }}, residente e domiciliada à {{ street }}, {{ city }},
