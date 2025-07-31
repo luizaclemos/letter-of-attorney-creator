@@ -11,15 +11,21 @@
     <link rel="stylesheet" href="{% static 'main.css' %}">
 </head>
 
-<header class="pageheader">
-    <img src="{% static 'img/logo.png' %}" alt="Company Logo" class="logo">
-</header>
-
 <body>
-    <h1>Bem vindo!</h1>
-    <br>
-    <p>Explicar aqui o que o programa faz</p>
-    <br>
-    <a href="{% url 'index' %}">Acesse o formulário</a>
+    <header class="pageheader">
+        <img src="{% static 'img/logo.png' %}" alt="Company Logo" class="logo">
+    </header>
+
+    <main>
+        <h1>Bem vindo!</h1>
+        <br>
+        <p>Explicar aqui o que o programa faz</p>
+        <br>
+        <a href="{% url 'index' %}">Acesse o formulário</a>
+    </main>
+
+    <footer class="page-footer">
+        <p>E-mail: contato@meudominio.com | Telefone: (00) 0000-0000 | Endereço: Rua Exemplo, 00, Bairro, Cidade, Estado</p>
+    </footer>
 </body>
 </html>

@@ -1,0 +1,17 @@
+body {
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    text-align: justify;
+    margin: 2cm;
+}
+
+.pdf-logo {
+    width: 150px;
+    display: block;
+    margin: 0 auto 20px auto;
+}
+
+.bold-underlined {
+    font-weight: bold;
+    text-decoration: underline;
+}
