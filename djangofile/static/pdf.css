@@ -1,17 +1,36 @@
 body {
     font-family: Arial, sans-serif;
-    font-size: 12pt;
+    font-size: 10pt;
     text-align: justify;
-    margin: 2cm;
+    margin: 1cm;
 }
 
 .pdf-logo {
-    width: 150px;
+    width: 250px;
     display: block;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 50px auto;
 }
 
 .bold-underlined {
     font-weight: bold;
     text-decoration: underline;
 }
+
+.content h1 {
+    text-align: center;
+}
+
+@page {
+    size: A4;
+    margin: 2cm;
+}
+
+.pdf-footer {
+    position: fixed;
+    bottom: 0.5;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 8pt;
+}
+

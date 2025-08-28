@@ -21,7 +21,9 @@
 
         <div class="content">
             <h1>Instrumento de Procuração</h1>
-            <br><br><br>
+            {% if not is_pdf %}
+                <br><br><br>
+            {% endif %}
             <p>
                 <span class="bold-underlined">OUTORGANTE</span>: {{ name }}, {{ nationality }}, {{ maritalstatus }}, {{ profession }}, 
                 inscrito(a) no CPF nº {{ cpf }}, portador(a) do RG nº {{ identity_card }}, residente e domiciliada à {{ street }}, {{ city }},
@@ -61,11 +63,16 @@
                     <button type="submit">Download PDF</button>
                 </form>
             {% endif %}
-            </div> 
+        </div> 
         
-        <div class="page-footer">
-            <p>E-mail: contato@meudominio.com | Telefone: (00) 0000-0000 | Endereço: Rua Exemplo, 00, Bairro, Cidade, Estado</p>
-        </div>
-
+        {% if is_pdf %}
+            <div class="pdf-footer" >
+                <p>E-mail: contato@meudominio.com | Telefone: (00) 0000-0000 | Endereço: Rua Exemplo, 00, Bairro, Cidade, Estado</p>
+            </div>
+        {% else %}
+            <div class="page-footer" >
+                <p>E-mail: contato@meudominio.com | Telefone: (00) 0000-0000 | Endereço: Rua Exemplo, 00, Bairro, Cidade, Estado</p>
+            </div>
+        {% endif %}
     </body>
 </html>

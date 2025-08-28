@@ -65,8 +65,12 @@ def download_pdf(request):
         response['Content-Disposition'] = 'attachment; filename="letter.pdf"'
 
         with open(css_path, 'r') as css_file:
-            pisa_status = pisa.CreatePDF(html, dest=response, link_callback=link_callback, default_css=css_file.read())
+            css_content = css_file.read()
+        
+        styled_html = f"<style>{css_content}</style>{html}"
 
+        pisa_status = pisa.CreatePDF(styled_html, dest=response, link_callback=link_callback)
+       
         if pisa_status.err:
             return HttpResponse('We had an error while generating your PDF', status=500)
         
