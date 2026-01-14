@@ -63,28 +63,40 @@ input[type="checkbox"] {
 
 select {
     border: 1px solid #ccc;
-    width: 150px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 15px;
+    box-sizing: border-box;
 }
 
 button {
     color: rgb(20, 20, 77);
     background-color: #e99416;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Montserrat Light', sans-serif;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;       /* efeito suave no hover */
+    width: auto;
 }
 
 input[type="text"],
 input[type="email"],
-select,
-button {
+select {
+    width: 100%;
     padding: 10px;
     border-radius: 10px;
+    border: 1px solid #ccc;
     font-size: 15px;
+    box-sizing: border-box;
 }
 
 button:hover {
     background-color: rgb(250, 202, 106);
-    cursor: pointer;
 }
-
 
 .form-row {
     display: flex;
@@ -95,7 +107,12 @@ button:hover {
 
 .form-group {
     flex: 1;
-    min-width: 200;
+    min-width: 200px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
 }
 
 p {
@@ -115,4 +132,48 @@ p {
     padding: 20px 0;
     color: #e99416;
     font-size: 10px;
+}
+
+.page-description {
+    display: block;
+    max-width: 33vw;      
+    margin: 30px auto 10px auto; 
+    line-height: 1.7;
+    text-align: left;
+    font-size: 16px;
+    padding: 0 1rem;
+}
+
+.main-button {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: rgb(20, 20, 77);
+    background-color: #e99416;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Montserrat Light', sans-serif;
+    margin: 20px auto 0 auto;
+    transition: background-color 0.3s;
+    
+}
+
+.main-button:hover {
+    background-color: rgb(250, 202, 106);
+    cursor: pointer;
+}
+
+.button-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.letter-text {
+    margin-left: 40px;
+    margin-right: 40px;
+}
+
+.download-button {
+    margin-left: 40px;
 }

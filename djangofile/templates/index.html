@@ -18,7 +18,7 @@
     </header>
     
     <main>
-        <h1>Letter of Attorney Creator</h1>
+        <h1>Procuração Automática</h1>
         <br><br><br>
         <section class="wrapper-main">
             <form action="{% url 'letter' %}" method="POST">
@@ -27,37 +27,31 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="name">Nome</label>
-                        <br>
                         <input type="text" id="name" name="name" placeholder="Nome" required>
                     </div>
 
                     <div class="form-group">
                         <label for="profession">Profissão</label>
-                        <br>
                         <input type="text" id="profession" name="profession" placeholder="Profissão" required>
                     </div>
 
                     <div class="form-group">
                         <label for="cpf">CPF</label>
-                        <br>
                         <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00">
                     </div>
                 
                     <div class="form-group">
                         <label for="identity_card">RG</label>
-                        <br>
                         <input type="text" id="identity_card" name="identity_card" placeholder="00.000.000-0" required>
                     </div>
 
                     <div class="form-group">
                         <label for="nationality">Nacionalidade</label>
-                        <br>
                         <input type="text" id="nationality" name="nationality" placeholder="Nacionalidade" required>
                     </div>
 
                     <div class="form-group">
                         <label for="maritalstatus">Estado Civil:</label>
-                        <br>
                         <select name="maritalstatus" id="maritalstatus">
                             <option value="Solteiro(a)">Solteiro(a)</option>
                             <option value="Casado(a)">Casado(a)</option>
@@ -69,37 +63,31 @@
 
                     <div class="form-group">  
                         <label for="email">E-mail</label>
-                        <br>
                         <input type="email" id="email" name="email" placeholder="E-mail">
                     </div>
 
                     <div class="form-group">
                         <label for="street">Endereço</label>
-                        <br>
                         <input type="text" id="street" name="street" placeholder="Endereço" required>
                     </div>
 
                     <div class="form-group">
                         <label for="city">Cidade</label>
-                        <br>
                         <input type="text" id="city" name="city" placeholder="Cidade" required>
                     </div>
 
                     <div class="form-group">
                         <label for="state">Estado</label>
-                        <br>
                         <input type="text" id="state" name="state" placeholder="Estado" required>
                     </div>
 
                     <div class="form-group">
                         <label for="zipcode">CEP</label>
-                        <br>
                         <input type="text" id="zipcode" name="zipcode" placeholder="00000-000" required>
                     </div>
 
                     <div class="form-group">
                         <label for="country">País</label>
-                        <br>
                         <input type="text" id="country" name="country" placeholder="País" required>
                     </div>
                 </div>

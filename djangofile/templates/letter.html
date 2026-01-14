@@ -24,7 +24,7 @@
             {% if not is_pdf %}
                 <br><br><br>
             {% endif %}
-            <p>
+            <p class="letter-text">
                 <span class="bold-underlined">OUTORGANTE</span>: {{ name }}, {{ nationality }}, {{ maritalstatus }}, {{ profession }}, 
                 inscrito(a) no CPF nº {{ cpf }}, portador(a) do RG nº {{ identity_card }}, residente e domiciliada à {{ street }}, {{ city }},
                 {{ state }}, {{ country }}, CEP {{ zipcode }}.<br>
@@ -60,7 +60,7 @@
                         <input type="hidden" name="powers[]" value="{{ power }}">            
                     {% endfor %}
 
-                    <button type="submit">Download PDF</button>
+                    <button type="submit" class="download-button">Download PDF</button>
                 </form>
             {% endif %}
         </div> 
