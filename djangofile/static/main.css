@@ -1,16 +1,14 @@
 .pageheader {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    padding: 5px 10px;
     border-bottom: 1px solid #e99416;
 }
 
 .logo {
-    height: 80px;
+    height: 70px;
     width: auto; 
-    margin-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin: 10px;
 }
 
 h1 {
